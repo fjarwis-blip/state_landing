@@ -2,20 +2,15 @@
 
 /* Smooth swiper transitions */
 .swiper-slide {
-    transition: transform 0.3s ease, opacity 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.4; /* Fade out non-active slides */
-}
-
-.swiper-slide-active {
-    opacity: 1;
 }
 
 /* Custom styling for the images */
 .swiper-slide img {
-    max-width: none;
+    max-height: 100%;
+    width: auto;
     user-select: none;
 }
 
