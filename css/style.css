@@ -1,0 +1,26 @@
+/* Custom styles for the scientific landing page */
+
+/* Smooth swiper transitions */
+.swiper-slide {
+    transition: opacity 0.3s ease;
+}
+
+/* Custom shadow for the carousel */
+.mySwiper {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Better typography for abstract */
+p {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Buttons hover effects */
+a {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover {
+    transform: translateY(-1px);
+}
