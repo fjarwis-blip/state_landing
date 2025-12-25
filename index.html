@@ -62,37 +62,58 @@
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="text-3xl font-bold mb-8 text-center text-slate-900">Abstract</h2>
             <p class="text-lg leading-relaxed text-slate-700 text-justify">
-                <!-- Empty description placeholder -->
-                This is a placeholder for the article abstract. It will contain a concise summary of the research, methodology, and key findings. The layout is optimized for readability with a maximum width and comfortable line spacing.
+                Instruction-based image editing is one of the most rapidly
+                advancing areas in generative AI. Over the past year,
+                progress has been substantial, with dozens of open-source
+                models released alongside several highly capable commer-
+                cial systems.
+                <br><br>
+                Despite this progress, relatively few open-source models
+                have reached production-level quality. Moreover, diffusion
+                models, the most common backbone for such pipelines, are
+                often prohibitively large and computationally expensive for
+                many real-world deployments and research settings, with
+                popular variants typically ranging from 6B to 20B parame-
+                ters.
+                <br><br>
+                This paper presents a compact, high-throughput pipeline
+                for instruction-based image editing that uses a modern 2B-
+                parameter Qwen3-VL model to guide the editing process
+                and the 1.6B-parameter diffusion model Sana for image
+                generation. The proposed approach combines architectural
+                choices that enable low-cost inference with data collec-
+                tion and processing, training configuration, and experimen-
+                tal design decisions aimed at maintaining production-level
+                quality across major categories of editing operations that
+                remain feasible at this model scale.
+                <br><br>
+                The model achieves XXX on XXX benchmarks, requires
+                XXX GB of GPU memory, and can generate edited images
+                at up to 4K resolution in XXX seconds on an NVIDIA H100.
+                The pipeline can also be further distilled.
             </p>
         </div>
     </section>
 
     <!-- Section 5: Examples (Carousel) -->
     <section class="py-16 max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold mb-12 text-center text-slate-900">Results</h2>
+        <h2 class="text-3xl font-bold mb-12 text-center text-slate-900">Dataset Examples</h2>
         
         <!-- Swiper Main Container -->
-        <div class="swiper mySwiper rounded-2xl shadow-2xl overflow-hidden bg-slate-100">
+        <div class="swiper mySwiper rounded-2xl shadow-2xl overflow-hidden bg-white">
             <div class="swiper-wrapper">
-                <!-- Slides (Empty examples) -->
-                <div class="swiper-slide aspect-video flex items-center justify-center text-slate-400">
-                    <div class="text-center">
-                        <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        <p class="font-medium text-lg text-slate-500">Example Result 1</p>
-                    </div>
+                <!-- Slides (Images from assets/images) -->
+                <div class="swiper-slide">
+                    <img src="assets/images/image_1.png" alt="Dataset Example 1" class="w-full h-auto block">
                 </div>
-                <div class="swiper-slide aspect-video flex items-center justify-center text-slate-400">
-                    <div class="text-center">
-                        <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        <p class="font-medium text-lg text-slate-500">Example Result 2</p>
-                    </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/image_2.png" alt="Dataset Example 2" class="w-full h-auto block">
                 </div>
-                <div class="swiper-slide aspect-video flex items-center justify-center text-slate-400">
-                    <div class="text-center">
-                        <svg class="w-16 h-16 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        <p class="font-medium text-lg text-slate-500">Example Result 3</p>
-                    </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/image_3.png" alt="Dataset Example 3" class="w-full h-auto block">
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/images/image_4.png" alt="Dataset Example 4" class="w-full h-auto block">
                 </div>
             </div>
             <!-- Navigation buttons -->
@@ -109,10 +130,10 @@
             <h2 class="text-3xl font-bold mb-8 text-white text-center">BibTeX</h2>
             <div class="bg-slate-800 p-6 rounded-lg relative overflow-x-auto border border-slate-700">
                 <pre class="text-sm font-mono leading-relaxed" id="bibtex-content">@article{sanabanana2025,
-  title  = {SanaBanana: How to rule the world},
-  author = {Alekseenko, Grigorii and Gordeev, Aleksandr and Tostykh, Irina and Suleimanov, Bulat and Dokholyan, Vladimir and Fedorov, Grorgii and Yakybson, Sergei and Tsybina, Aleksandra and Chernyshov, Mikhail and Kuprashevich, Maksim},
-  journal= {arXiv preprint},
-  year   = {2025}
+  title = {SanaBanana: How to rule the world},
+  author = {Alekseenko Grigorii and Gordeev Aleksandr and Tostykh Irina and Suleimanov Bulat and Dokholyan Vladimir and Fedorov Grorgii and Yakybson Sergei and Tsybina Aleksandra and Chernyshov Mikhail and Kuprashevich Maksim},
+  journal = {arXiv preprint},
+  year = {2025}
 }</pre>
                 <button id="copy-btn" class="absolute top-4 right-4 text-xs bg-slate-700 hover:bg-slate-600 px-3 py-1 rounded transition text-white">Copy</button>
             </div>
