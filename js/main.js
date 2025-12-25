@@ -17,7 +17,8 @@ const swiper = new Swiper(".mySwiper", {
         enabled: true,
     },
     // Responsive behavior
-    slidesPerView: 1,
+    slidesPerView: 'auto',
+    centeredSlides: true,
     spaceBetween: 30,
 });
 

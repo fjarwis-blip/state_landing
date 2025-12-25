@@ -3,11 +3,15 @@
 /* Smooth swiper transitions */
 .swiper-slide {
     transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Custom shadow for the carousel */
 .mySwiper {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    background: transparent !important;
 }
 
 /* Better typography for abstract */
